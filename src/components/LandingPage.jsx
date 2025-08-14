@@ -1,86 +1,99 @@
 import React from "react";
 import { Container, Row, Col, Navbar, Nav, Accordion } from "react-bootstrap";
-import "../index.css"; 
+import "../index.css";
 
 export default function LandingPage() {
   return (
     <>
-      {/* Navbar */}
-    <nav className="custom-navbar">
-  <div className="container">
-    <a href="#">
-      <img src="/Logo.png" alt="CT Digital Logo" height="40" />
-    </a>
-    <ul className="nav-links">
-      <li><a href="#">SERVICES</a></li>
-      <li><a href="#">ABOUT US</a></li>
-      <li><a href="#">CONTACT US</a></li>
-      <li><a href="#">CAREERS</a></li>
-    </ul>
-  </div>
-</nav>
+      {/* Prevent horizontal scroll */}
+      <div style={{ overflowX: "hidden" }}>
+        {/* Responsive Navbar */}
+        <Navbar expand="lg" className="custom-navbar bg-light">
+          <Container fluid>
+            <Navbar.Brand href="#">
+              <img
+                src="/Logo.png"
+                alt="CT Digital Logo"
+                className="img-fluid"
+                style={{ maxHeight: "40px" }}
+              />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="main-navbar" />
+            <Navbar.Collapse id="main-navbar">
+              <Nav className="ms-auto">
+                <Nav.Link href="#">SERVICES</Nav.Link>
+                <Nav.Link href="#">ABOUT US</Nav.Link>
+                <Nav.Link href="#">CONTACT US</Nav.Link>
+                <Nav.Link href="#">CAREERS</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
 
-      {/* Hero Section */}
-      <section className="hero section">
-  <img
-    src="/Hero Section.png"
-    alt="Laptop"
-    className="img-fluid w-100"
-    style={{
-      height: "700px",        
-   
-      objectFit: "cover"
-    }}
-  />
+        {/* Hero Section */}
+        <section className="hero-section">
+          <img
+            src="/Hero Section.png"
+            alt="Laptop"
+            className="img-fluid w-100 hero-img"
+            style={{
+              objectFit: "cover",
+              width: "100%",
+              height: "auto",
+              maxWidth: "100%",
+              position: "relative",
+            }}
+          />
+        </section>
 
-</section>
+        {/* Services Section */}
+        <Container className="py-5">
+          <Row className="align-items-center mb-5">
+            <Col xs={12} md={6} className="mb-4 mb-md-0">
+              <img
+                src="/image 2.png"
+                alt="Web & Mobile App Development"
+                className="img-fluid w-100"
+                style={{ height: "auto", maxWidth: "100%" }}
+              />
+            </Col>
+            <Col xs={12} md={6}>
+              <h4 className="title">Web & Mobile App Development</h4>
+              <p>
+                Your web and mobile Apps are pieces of the puzzle to grow your
+                business. We use frameworks which tailor content and engagement
+                methods to respond to different intents shown by your potential
+                customers who interact with your business online.
+              </p>
+              <button className="btn custom-btn text-white">LEARN MORE</button>
+            </Col>
+          </Row>
 
+          <Row className="align-items-center flex-md-row-reverse">
+            <Col xs={12} md={6} className="mb-4 mb-md-0">
+              <img
+                src="/image 1.png"
+                alt="Digital Strategy Consulting"
+                className="img-fluid w-100"
+                style={{ height: "auto", maxWidth: "100%" }}
+              />
+            </Col>
+            <Col xs={12} md={6}>
+              <h4 className="title">Digital Strategy Consulting</h4>
+              <p>
+                Your digital strategy should complement the overall marketing
+                strategy of the company. In online marketing, each component
+                will never work in isolation and every business needs a
+                different mix. We provide a clear concept and strategic
+                overview to find the most efficient model for your business.
+              </p>
+              <button className="btn custom-btn text-white">LEARN MORE</button>
+            </Col>
+          </Row>
+        </Container>
 
- 
-<Container className="py-5">
-  
-  <Row className="align-items-center mb-5">
-    <Col md={6}>
-      <img
-        src="/image 2.png"
-        alt="Web & Mobile App Development"
-        className="img-fluid"
-      />
-    </Col>
-    <Col md={6}>
-      <h4 className="title">Web & Mobile App Development</h4>
-      <p>
-       Your web and mobile Apps are pieces of the puzzle to grow your business. We use frameworks
-       which tailor content and engagement methods to respond to different intents shown by your
-       potential customers who interact with your business online.
-      </p>
-      <button className="btn custom-btn text-white">LEARN MORE</button>
-    </Col>
-  </Row>
-
- 
-  <Row className="align-items-center flex-md-row-reverse">
-    <Col md={6}>
-      <img
-        src="/image 1.png"
-        alt="Digital Strategy Consulting"
-        className="img-fluid"
-      />
-    </Col>
-    <Col md={6}>
-      <h4 className="title">Digital Strategy Consulting</h4>
-      <p>
-       Your digital strategy should complement the overall marketing strategy of the company. In online
-       marketing, each component will never work in isolation and every business needs a different mix. 
-       We provide a clear concept and strategic overview to find the most efficient model for your business.
-      </p>
-      <button className="btn custom-btn text-white">LEARN MORE</button>
-    </Col>
-  </Row>
-</Container>
-
-
-<section className="bg-light py-5">
+        {/* FAQ Section */}
+        <section className="bg-light py-5">
   <Container>
       <Row className="justify-content-center">
     <Col md={8}>  
@@ -122,64 +135,63 @@ export default function LandingPage() {
   </Container>
 </section>
 
-      
-      {/* Footer */}
-    <footer className="custom-footer text-white py-5">
-  <Container>
-    <Row className="align-items-start">
-      
-       <Col md={3}>
-    <img src="/Logo.png" alt="AT Digital Logo" height="40" className="mb-3" />
-    <p style={{ maxWidth: "300px" }}>
-      Your goal is our target. Not anything in between. We use online
-      marketing platforms and tools to achieve a single objective —
-      your business results.
-    </p>
-  </Col>
+        {/* Footer */}
+        <footer className="custom-footer text-white py-5">
+          <Container>
+            <Row className="align-items-start">
+              <Col xs={12} md={3} className="mb-4 mb-md-0">
+                <img
+                  src="/Logo.png"
+                  alt="AT Digital Logo"
+                  className="img-fluid"
+                  style={{ maxHeight: "40px" }}
+                />
+                <p style={{ maxWidth: "300px" }}>
+                  Your goal is our target. Not anything in between. We use
+                  online marketing platforms and tools to achieve a single
+                  objective — your business results.
+                </p>
+              </Col>
 
-  
-  <Col md={3}></Col>
+              <Col xs={12} md={3} className="mb-4 mb-md-0"></Col>
 
-  
-  <Col md={3}>
-    <h6 className="fw-bold">Our Technologies</h6>
-    <ul className="list-unstyled">
-      <li>ReactJS</li>
-      <li>Gatsby</li>
-      <li>NextJS</li>
-      <li>NodeJS</li>
-    </ul>
-  </Col>
+              <Col xs={12} md={3} className="mb-4 mb-md-0">
+                <h6 className="fw-bold">Our Technologies</h6>
+                <ul className="list-unstyled">
+                  <li>ReactJS</li>
+                  <li>Gatsby</li>
+                  <li>NextJS</li>
+                  <li>NodeJS</li>
+                </ul>
+              </Col>
 
- 
-  <Col md={3}>
-    <h6 className="fw-bold">Our Services</h6>
-    <ul className="list-unstyled">
-      <li>Social Media Marketing</li>
-      <li>Web & Mobile App Development</li>
-      <li>Data & Analytics</li>
-    </ul>
-  </Col>
-</Row>
+              <Col xs={12} md={3}>
+                <h6 className="fw-bold">Our Services</h6>
+                <ul className="list-unstyled">
+                  <li>Social Media Marketing</li>
+                  <li>Web & Mobile App Development</li>
+                  <li>Data & Analytics</li>
+                </ul>
+              </Col>
+            </Row>
 
+            {/* Footer Line */}
+            <hr
+              className="mt-4"
+              style={{
+                borderColor: "white",
+                borderWidth: "2px",
+                width: "80%",
+                margin: "0 auto",
+              }}
+            />
 
-   {/*Line*/ }
-    <hr
-  className="mt-4"
-  style={{
-    borderColor: "white",
-    borderWidth: "2px",
-    width: "80%", 
-    margin: "0 auto" 
-  }}
-/>
-
-   
-    <p className="text-center mb-0">
-      Privacy Policy &nbsp;|&nbsp; Terms & Conditions
-    </p>
-  </Container>
-</footer>
-    </>
-  );
+            <p className="text-center mb-0 mt-3">
+              Privacy Policy &nbsp;|&nbsp; Terms & Conditions
+            </p>
+          </Container>
+        </footer>
+      </div>
+    </>
+  );
 }
