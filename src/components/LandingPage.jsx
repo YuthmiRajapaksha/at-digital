@@ -5,9 +5,9 @@ import "../index.css";
 export default function LandingPage() {
   return (
     <>
-      {/* Prevent horizontal scroll */}
+     
       <div style={{ overflowX: "hidden" }}>
-        {/* Responsive Navbar */}
+        
         <Navbar expand="lg" className="custom-navbar bg-light">
           <Container fluid>
             <Navbar.Brand href="#">
@@ -30,7 +30,7 @@ export default function LandingPage() {
           </Container>
         </Navbar>
 
-        {/* Hero Section */}
+        
         <section className="hero-section">
           <img
             src="/Hero Section.png"
@@ -46,7 +46,7 @@ export default function LandingPage() {
           />
         </section>
 
-        {/* Services Section */}
+       
         <Container className="py-5">
           <Row className="align-items-center mb-5">
             <Col xs={12} md={6} className="mb-4 mb-md-0">
@@ -92,7 +92,7 @@ export default function LandingPage() {
           </Row>
         </Container>
 
-        {/* FAQ Section */}
+       
         <section className="bg-light py-5">
   <Container>
       <Row className="justify-content-center">
@@ -135,7 +135,7 @@ export default function LandingPage() {
   </Container>
 </section>
 
-        {/* Footer */}
+        
         <footer className="custom-footer text-white py-5">
           <Container>
             <Row className="align-items-start">
@@ -175,7 +175,7 @@ export default function LandingPage() {
               </Col>
             </Row>
 
-            {/* Footer Line */}
+           
             <hr
               className="mt-4"
               style={{
