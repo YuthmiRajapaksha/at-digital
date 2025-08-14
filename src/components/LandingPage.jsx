@@ -124,40 +124,44 @@ export default function LandingPage() {
 
       
       {/* Footer */}
-     <footer className="custom-footer text-white py-5">
+    <footer className="custom-footer text-white py-5">
   <Container>
     <Row className="align-items-start">
-    
-      <Col md={4}>
-        <img src="/Logo.png" alt="AT Digital Logo" height="40" className="mb-3" />
-        <p style={{ maxWidth: "300px" }}>
-          Your goal is our target. Not anything in between. We use online
-          marketing platforms and tools to achieve a single objective —
-          your business results.
-        </p>
-      </Col>
-
       
-      <Col md={4}>
-        <h6 className="fw-bold">Our Technologies</h6>
-        <ul className="list-unstyled">
-          <li>ReactJS</li>
-          <li>Gatsby</li>
-          <li>NextJS</li>
-          <li>NodeJS</li>
-        </ul>
-      </Col>
+       <Col md={3}>
+    <img src="/Logo.png" alt="AT Digital Logo" height="40" className="mb-3" />
+    <p style={{ maxWidth: "300px" }}>
+      Your goal is our target. Not anything in between. We use online
+      marketing platforms and tools to achieve a single objective —
+      your business results.
+    </p>
+  </Col>
 
-     
-      <Col md={4}>
-        <h6 className="fw-bold">Our Services</h6>
-        <ul className="list-unstyled">
-          <li>Social Media Marketing</li>
-          <li>Web & Mobile App Development</li>
-          <li>Data & Analytics</li>
-        </ul>
-      </Col>
-    </Row>
+  
+  <Col md={3}></Col>
+
+  
+  <Col md={3}>
+    <h6 className="fw-bold">Our Technologies</h6>
+    <ul className="list-unstyled">
+      <li>ReactJS</li>
+      <li>Gatsby</li>
+      <li>NextJS</li>
+      <li>NodeJS</li>
+    </ul>
+  </Col>
+
+ 
+  <Col md={3}>
+    <h6 className="fw-bold">Our Services</h6>
+    <ul className="list-unstyled">
+      <li>Social Media Marketing</li>
+      <li>Web & Mobile App Development</li>
+      <li>Data & Analytics</li>
+    </ul>
+  </Col>
+</Row>
+
 
    {/*Line*/ }
     <hr
